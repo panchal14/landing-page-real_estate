@@ -1,0 +1,12 @@
+ModPagespeed off
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^https://reignrealestate.ae/buy-fully-furnished-luxury-villa/index.html$ [OR]
+  RewriteCond %{HTTP_HOST} ^https://reignrealestate.ae/buy-fully-furnished-luxury-villa/index.html$
+  RewriteRule (.*)$ https://reignrealestate.ae/buy-fully-furnished-luxury-villa/index.html/$1 [R=301,L]
+</IfModule>
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|webp|svg|png|gif|js|css|swf)$">
+Header set Cache-Control "max-age=3860480000, public"
+</FilesMatch>
